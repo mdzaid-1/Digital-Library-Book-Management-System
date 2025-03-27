@@ -24,7 +24,6 @@ Frontend: HTML, CSS, JavaScript
 
 Build Tool: Maven
 
-
 📂 Project Setup
 
 1️⃣ Clone the Repository

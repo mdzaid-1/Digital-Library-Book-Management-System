@@ -16,6 +16,7 @@ A Spring Boot-based web application for managing a digital library, allowing use
 ✅ Manage book availability status
 
 
+
 🛠️ Technologies Used
 
 Backend: Spring Boot, Hibernate, MySQL

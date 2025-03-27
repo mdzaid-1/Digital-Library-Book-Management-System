@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Books</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="viewBooks.js"></script>
+</head>
+<body>
+    
+    <h1>Digital Library</h1>
+    <div class="container">
+        
+        <form id="bookForm">
+            <button type="button" onclick="window.location.href='addBook.html'" class="insert">Add New Book</button>
+        
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="bookTable"></tbody>
+        </table>
+        </form>
+
+        <a href="home.html" class="back-btn">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Add a New Book</h1>
+    <div class="container">
+        <form id="addBookForm">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="author" placeholder="Author" required>
+        <input type="text" id="genre" placeholder="Genre">
+        <select id="availabilityStatus">
+            <option value="Available">Available</option>
+            <option value="Checked Out">Checked Out</option>
+        </select>
+        <button type="submit" class="insert">Add Book</button>
+        </form>
+        <a href="home.html" class="back-btn">Back to Home</a>
+    </div>
+</body>
+</html>

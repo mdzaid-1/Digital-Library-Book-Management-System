@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Book</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Delete a Book</h1>
+    <div class="container">
+        
+        <form id="deleteForm" onsubmit="event.preventDefault(); deleteBook();">
+            <input type="number" id="deleteId" placeholder="Enter Book ID" required>
+
+            <button type="submit" class="insert">Delete</button>
+            
+        </form>
+        <a href="home.html" class="back-btn">Back to Home</a>
+    </div>
+</body>
+</html>

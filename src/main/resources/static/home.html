@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+
+    <h1>Welcome to the Digital Library</h1>
+
+    <div class="container">
+        <p>Manage books efficiently with our system.</p>
+        <br>
+        <div class="buttons">
+            <a href="addBook.html" class="btn">📚 Add a Book</a>
+            <a href="searchBook.html" class="btn">🔍 Search a Book</a>
+            <a href="viewBooks.html" class="btn">📖 View All Books</a>
+            <a href="updateBook.html" class="btn">✏️ Update a Book</a>
+            <a href="deleteBook.html" class="btn">🗑️ Delete a Book</a>
+        </div>
+    </div>
+
+    <!-- Exit Button -->
+    <button class="exit-btn" onclick="exitApp()"> Exit</button>
+    <script>
+        function exitApp() {
+            if (confirm("Are you sure you want to exit?")) {
+                window.close();
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+

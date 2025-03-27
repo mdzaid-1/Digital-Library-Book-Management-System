@@ -1,0 +1,308 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0A1931;
+    color: #EAEAEA;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Heading */
+h1 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #1B4F72, #154360);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    min-width: 160px;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #154360, #0E3742);
+    transform: scale(1.05);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    width: 100%;
+}
+
+input, select, button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+input, select {
+    background: #1C2833;
+    color: #EAEAEA;
+    border: 1px solid #666;
+}
+
+/* Search Results */
+#searchResult {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Book Card */
+.book-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+.book-card h3 {
+    color: #FFD700;
+    font-size: 20px;
+}
+
+.status {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.status.available {
+    background-color: #28a745;
+    color: white;
+}
+
+.status.unavailable {
+    background-color: #e74c3c;
+    color: white;
+}
+/* Table Styling */
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+th {
+    background: linear-gradient(135deg, #1B4F72, #154360);
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 12px;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+    th, td {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+    .buttons {
+        flex-wrap: wrap;
+    }
+    .btn {
+        font-size: 16px;
+        padding: 12px 16px;
+        min-width: 140px;
+    }
+    .book-card {
+        width: 45%; 
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+    .btn {
+        font-size: 16px;
+        padding: 10px 14px;
+    }
+    .book-card {
+        width: 100%; 
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+    .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    .book-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+/* Back to Home Button */
+.back-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #50C878, #006400);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.back-btn:hover {
+    background: #006400;
+    transform: scale(1.05);
+}
+
+.back-btn:active {
+    background: #0E3742;
+    transform: scale(0.98);
+}
+
+
+/* Exit Button */
+.exit-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.exit-btn:hover {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    transform: scale(1.05);
+}
+
+.exit-btn:active {
+    background: #c0392b;
+    transform: scale(0.98);
+}
+
+/* Button Style */
+.insert {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px 12px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #28a745, #218838); 
+    color: white;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    width: auto; 
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.insert:hover {
+    background: #1e7e34; 
+    transform: scale(1.05);
+}
+
+.insert:active {
+    background: #19692c; 
+    transform: scale(0.98);
+}
+ 

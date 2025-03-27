@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Book</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Update Book Details</h1>
+    <div class="container">
+    <form id="updateBookForm">
+        <input type="number" id="updateId" placeholder="Book ID" required>
+        <input type="text" id="updateTitle" placeholder="New Title">
+        <input type="text" id="updateAuthor" placeholder="New Author">
+        <input type="text" id="updateGenre" placeholder="New Genre">
+        <select id="updateStatus">
+            <option value="Available">Available</option>
+            <option value="Checked Out">Checked Out</option>
+        </select>
+        <button type="submit" class="insert">Update Book</button>
+
+    </form>
+    
+    <a href="home.html" class="back-btn">Back to Home</a>
+    </div>
+    
+</body>
+</html>

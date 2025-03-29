@@ -1,20 +1,17 @@
 # Use an official OpenJDK runtime as a parent image
 FROM openjdk:17-jdk-slim
 
+# Install Maven
+RUN apt-get update && apt-get install -y maven
+
 # Set the working directory
 WORKDIR /app
 
-# Copy the Maven wrapper and pom.xml first
-COPY mvnw pom.xml ./
+# Copy the entire project
+COPY . ./
 
-# Copy the source code
-COPY src ./src
-
-# Give execution permission to Maven wrapper
-RUN chmod +x mvnw
-
-# Build the application
-RUN ./mvnw clean package -DskipTests
+# Build the application using installed Maven
+RUN mvn clean package -DskipTests
 
 # Copy the built JAR file into the container
 COPY target/*.jar app.jar

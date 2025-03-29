@@ -1,7 +1,5 @@
-# Use OpenJDK 21 as the base image
-FROM openjdk:21-jdk-slim
-
-# Set the working directory
+# Stage 1: Build the application
+FROM openjdk:21-jdk-slim AS builder
 WORKDIR /app
 
 # Copy Maven wrapper and project files
@@ -17,8 +15,12 @@ COPY src ./src
 # Build the application
 RUN ./mvnw clean package -DskipTests
 
-# Copy the built JAR file into the container
-COPY target/*.jar app.jar
+# Stage 2: Run the application
+FROM openjdk:21-jdk-slim
+WORKDIR /app
+
+# Copy the built JAR file from the builder stage
+COPY --from=builder /app/target/*.jar app.jar
 
 # Expose the default Spring Boot port
 EXPOSE 8080

@@ -2,13 +2,13 @@
 FROM openjdk:17-jdk-slim
 
 # Set the working directory
-WORKDIR /library
+WORKDIR /app
 
-# Copy the application JAR file into the container
-COPY target/Digital-Library-Book-Management-System-0.0.1-SNAPSHOT.jar library.jar
+# Copy the built JAR file into the container
+COPY target/Digital-Library-Book-Management-System-0.0.1-SNAPSHOT.jar app.jar
 
-# Expose the application port
+# Expose the default Spring Boot port
 EXPOSE 8080
 
-# Command to run the application
-ENTRYPOINT ["java", "-jar", "library.jar"]
+# Run the application
+ENTRYPOINT ["java", "-jar", "app.jar"]

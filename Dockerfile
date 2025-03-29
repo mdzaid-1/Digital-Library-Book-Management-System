@@ -4,7 +4,8 @@ WORKDIR /app
 
 # Copy Maven wrapper and project files
 COPY .mvn .mvn
-COPY mvnw pom.xml ./
+COPY mvnw .
+COPY pom.xml .
 
 # Give execution permission to Maven wrapper
 RUN chmod +x mvnw
@@ -20,7 +21,7 @@ FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 # Copy the built JAR file from the builder stage
-COPY --from=builder /app/target/*.jar app.jar
+COPY --from=builder /app/target/Digital-Library-Book-Management-System-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the default Spring Boot port
 EXPOSE 8080
